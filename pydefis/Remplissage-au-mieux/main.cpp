@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int target = 1881;
+vector<int> nums = {12, 24, 31, 77, 87, 103, 112, 145, 181, 197, 205, 217, 224, 225, 228, 255, 263, 278, 289, 297};
+bool done = false;
+
+void findNums(vector<int> &selected, unordered_map<int, int> &used) {
+    if (done)
+        return;
+
+    int sum = accumulate(selected.begin(), selected.end(), 0);
+
+    if (sum == target) {
+        done = true;
+        for (int a : selected)
+            cout << a << " ";
+        cout << endl;
+        return;
+    }
+    
+    for (auto n : nums) {
+        if (used[n] == 0 && (sum + n) <= 1881) {
+            selected.push_back(n);
+            used[n] = 1;
+            findNums(selected, used);
+            selected.pop_back();
+            used[n] = 0;
+        }
+    }
+}
+
+int main() {
+    vector<int> selected;
+    unordered_map<int, int> used;
+    
+    findNums(selected, used);
+}
