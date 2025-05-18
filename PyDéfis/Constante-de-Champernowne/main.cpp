@@ -5,7 +5,7 @@ int n = 0;
 int total = 0;
 string s = "";
 int main() {
-	for (int i = 1; i <= 10000; i++) {
+for (int i = 1; i <= 10000; i++) {
 		s += to_string(i);
 
 		if (s.size() >= 493)
