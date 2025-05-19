@@ -6,7 +6,7 @@ using namespace std;
 
 float inf = numeric_limits<float>::infinity();
 
-    float floydWarshallSum(vector<vector<float>> dist) {
+float floydWarshallSum(vector<vector<float>> dist) {
     int V = dist.size(); 
     float total = 0;
  
@@ -40,6 +40,7 @@ int main() {
     for (int i = 0; i < 85; i++) {
         string a, b, c;
         cin >> a >> b >> c;
+
         a = a.substr(0, a.size() - 1);
         b = b.substr(0, b.size() - 1);
         dist[stoi(a) - 1][stoi(b) - 1] = stof(c);
@@ -55,8 +56,9 @@ int main() {
             dist[i][j] = 0;
             dist[j][i] = 0;
             
-            for (int k = 0; k < s; k++) {
-                for (int l = k + 1; l < s; l++) {
+            for (int k = i; k < s; k++) {
+                int start_l = (k == i) ? j + 1 : k + 1;
+                for (int l = start_l; l < s; l++) {
                     float old2 = dist[k][l];
                     dist[k][l] = 0;
                     dist[l][k] = 0;
@@ -71,7 +73,6 @@ int main() {
                     dist[l][k] = old2;
                 }
             }
-            
             dist[i][j] = old1;
             dist[j][i] = old1;
         }
@@ -80,6 +81,4 @@ int main() {
     for (int i : ans) {
         cout << i + 1 << " ";
     }
-
-    cout << endl << smallest << endl;
 }
