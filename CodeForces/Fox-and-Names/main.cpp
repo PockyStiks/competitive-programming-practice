@@ -12,7 +12,7 @@ int main() {
         names.push_back(name);
     }
     
-    vector<vector<int>> graph;
+    vector<vector<int>> graph(26);
     vector<int> in_degree(26, 0);
     for (int i = 0; i < n-1; i++) {
         if (names[i+1].size() < names[i].size() && names[i].substr(0, names[i+1].size()) == names[i+1]) {
@@ -26,6 +26,7 @@ int main() {
 
             graph[names[i][c] - 'a'].push_back(names[i+1][c] - 'a');
             in_degree[names[i+1][c] - 'a']++;
+            break;
         }
     }
 
@@ -55,6 +56,6 @@ int main() {
     }
 
     for (int e : topo)
-        cout << 'a' + e;
+        cout << (char)('a' + e);
 }
     
