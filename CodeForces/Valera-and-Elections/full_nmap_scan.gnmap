@@ -1,0 +1,4 @@
+# Nmap 7.97 scan initiated Thu Sep 18 10:23:06 2025 as: nmap -sS -p- -T4 -sV -O -A -Pn --reason --script default,safe,discovery -oA full_nmap_scan abaque.ca
+Host: 139.103.64.13 (abaque.info.umcm.umoncton.ca)	Status: Up
+Host: 139.103.64.13 (abaque.info.umcm.umoncton.ca)	Ports: 22/open/tcp//ssh//OpenSSH 10.0 (protocol 2.0)/, 80/open/tcp//http//nginx 1.28.0/, 443/open/tcp//ssl|http//nginx 1.28.0/	Ignored State: filtered (65532)	Seq Index: 260	IP ID Seq: All zeros
+# Nmap done at Thu Sep 18 10:28:00 2025 -- 1 IP address (1 host up) scanned in 293.40 seconds

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.97 scan initiated Thu Sep 18 10:23:06 2025 as: nmap -sS -p- -T4 -sV -O -A -Pn -&#45;reason -&#45;script default,safe,discovery -oA full_nmap_scan abaque.ca -->
+<nmaprun scanner="nmap" args="nmap -sS -p- -T4 -sV -O -A -Pn -&#45;reason -&#45;script default,safe,discovery -oA full_nmap_scan abaque.ca" start="1758201786" startstr="Thu Sep 18 10:23:06 2025" version="7.97" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<prescript><script id="broadcast-listener" output="&#xa;  ether&#xa;  udp&#xa;      DHCP&#xa;        srv ip          cli ip          mask           gw              dns                           vendor&#xa;        139.103.96.254  139.103.111.38  255.255.240.0  139.103.96.254  139.103.8.130, 139.103.8.133  -&#xa;"/><script id="broadcast-ospf2-discover" output="ERROR: Script execution failed (use -d to debug)"/><script id="hostmap-robtex" output="*TEMPORARILY DISABLED* due to changes in Robtex&apos;s API. See https://www.robtex.com/api/"/><script id="lltd-discovery" output=""></script><script id="broadcast-upnp-info" output=""></script><script id="broadcast-ataoe-discover" output="ERROR: Script execution failed (use -d to debug)"/><script id="targets-sniffer" output="Sniffed 0 address(es). &#xa;"/><script id="targets-ipv6-multicast-slaac" output="&#xa;  IP: fe80::1401:c30b:6397:aca   MAC: 2e:cd:17:b1:d9:04  IFACE: wlan0&#xa;  IP: fe80::b683:f584:f405:e26b  MAC: bc:54:2f:45:e1:83  IFACE: wlan0&#xa;  IP: fe80::dd04:3272:4b20:b541  MAC: 04:ec:d8:c7:58:4e  IFACE: wlan0&#xa;  IP: fe80::1fbe:46c2:6d36:b9ed  MAC: b2:24:80:aa:88:4a  IFACE: wlan0&#xa;  IP: fe80::7690:e94:57c7:298f   MAC: 94:bb:43:3f:31:5e  IFACE: wlan0&#xa;  IP: fe80::7b06:8d89:cebb:f497  MAC: dc:1b:a1:98:25:7e  IFACE: wlan0&#xa;  IP: fe80::8a1:d88c:2962:3307   MAC: e6:95:90:45:db:30  IFACE: wlan0&#xa;  IP: fe80::7fe0:4eff:38f5:6fc8  MAC: 10:68:38:6b:88:ae  IFACE: wlan0&#xa;  IP: fe80::3bca:6e55:468e:e8d8  MAC: 40:c7:3c:7e:95:b4  IFACE: wlan0&#xa;  IP: fe80::a063:240c:60f7:367b  MAC: dc:4b:a1:16:97:8a  IFACE: wlan0&#xa;  Use -&#45;script-args=newtargets to add the results as targets&#xa;"/><script id="broadcast-eigrp-discovery" output="ERROR: Script execution failed (use -d to debug)"/><script id="broadcast-pim-discovery" output="ERROR: Script execution failed (use -d to debug)"/><script id="multicast-profinet-discovery" output="0">0</script><script id="http-robtex-shared-ns" output="*TEMPORARILY DISABLED* due to changes in Robtex&apos;s API. See https://www.robtex.com/api/"/><script id="eap-info" output="ERROR: Script execution failed (use -d to debug)"/><script id="mrinfo" output="ERROR: Script execution failed (use -d to debug)"/><script id="targets-asn" output="&#xa;  targets-asn.asn is a mandatory parameter&#xa;"/><script id="knx-gateway-discover" output="ERROR: Script execution failed (use -d to debug)"/><script id="broadcast-igmp-discovery" output="ERROR: Script execution failed (use -d to debug)"/></prescript><host starttime="1758201827" endtime="1758202080"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="139.103.64.13" addrtype="ipv4"/>
+<hostnames>
+<hostname name="abaque.ca" type="user"/>
+<hostname name="abaque.info.umcm.umoncton.ca" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65532">
+<extrareasons reason="no-response" count="65532" proto="tcp" ports="1-21,23-79,81-442,444-65535"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="62"/><service name="ssh" product="OpenSSH" version="10.0" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:10.0</cpe></service><script id="banner" output="SSH-2.0-OpenSSH_10.0"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="62"/><service name="http" product="nginx" version="1.28.0" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.28.0</cpe></service><script id="http-title" output="Did not follow redirect to https://abaque.ca/"><elem key="redirect_url">https://abaque.ca/</elem>
+</script><script id="http-date" output="Thu, 18 Sep 2025 13:26:05 GMT; 0s from local time."><elem key="date">2025-09-18T13:26:05+00:00</elem>
+<elem key="delta">0.0</elem>
+</script><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-headers" output="&#xa;  Server: nginx/1.28.0&#xa;  Date: Thu, 18 Sep 2025 13:26:15 GMT&#xa;  Content-Type: text/html&#xa;  Content-Length: 169&#xa;  Connection: close&#xa;  Location: https://abaque.ca/&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="vulners" output="&#xa;  nginx 1.28.0: &#xa;    &#x9;NGINX:CVE-2025-53859&#x9;6.3&#x9;https://vulners.com/nginx/NGINX:CVE-2025-53859"><table key="nginx 1.28.0">
+<table>
+<elem key="cvss">6.3</elem>
+<elem key="type">nginx</elem>
+<elem key="is_exploit">false</elem>
+<elem key="id">NGINX:CVE-2025-53859</elem>
+</table>
+</table>
+</script><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-server-header" output="nginx/1.28.0"><elem>nginx/1.28.0</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Redirected To: https://abaque.ca/&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<elem key="Redirected To">https://abaque.ca/</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    &#xa;"/><script id="http-security-headers" output="&#xa;  Strict_Transport_Security: &#xa;    Header: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload&#xa;  X_Frame_Options: &#xa;    Header: X-Frame-Options: DENY&#xa;    Description: The browser must not display this content in any frame.&#xa;  X_Content_Type_Options: &#xa;    Header: X-Content-Type-Options: nosniff&#xa;    Description: Will prevent the browser from MIME-sniffing a response away from the declared content-type. "><table key="Strict_Transport_Security">
+<elem>Header: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</elem>
+</table>
+<table key="X_Frame_Options">
+<elem>Header: X-Frame-Options: DENY</elem>
+<elem>Description: The browser must not display this content in any frame.</elem>
+</table>
+<table key="X_Content_Type_Options">
+<elem>Header: X-Content-Type-Options: nosniff</elem>
+<elem>Description: Will prevent the browser from MIME-sniffing a response away from the declared content-type. </elem>
+</table>
+</script><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-xssed" output="No previously reported XSS vuln."/><script id="http-vhosts" output="&#xa;128 names had status 301"/><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-chrono" output="Request times for /; avg: 292.01ms; min: 217.71ms; max: 413.99ms"/><script id="http-errors" output="Couldn&apos;t find any error pages."/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="62"/><service name="http" product="nginx" version="1.28.0" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.28.0</cpe></service><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1&#xa;    /css/&#xa;      css: 1; jpg: 3; png: 4&#xa;    /~eric/a25/info3214/&#xa;      Other: 1&#xa;    /~eric/archlinux/&#xa;      Other: 1&#xa;  Longest directory structure:&#xa;    Depth: 3&#xa;    Dir: /~eric/a25/info3214/&#xa;  Total files found (by extension):&#xa;    Other: 3; css: 1; jpg: 3; png: 4&#xa;"/><script id="http-date" output="Thu, 18 Sep 2025 13:26:05 GMT; 0s from local time."><elem key="date">2025-09-18T13:26:05+00:00</elem>
+<elem key="delta">0.0</elem>
+</script><script id="http-vuln-cve2011-3192" output="&#xa;  VULNERABLE:&#xa;  Apache byterange filter DoS&#xa;    State: VULNERABLE&#xa;    IDs:  BID:49303  CVE:CVE-2011-3192&#xa;      The Apache web server is vulnerable to a denial of service attack when numerous&#xa;      overlapping byte ranges are requested.&#xa;    Disclosure date: 2011-08-19&#xa;    References:&#xa;      https://www.tenable.com/plugins/nessus/55976&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192&#xa;      https://www.securityfocus.com/bid/49303&#xa;      https://seclists.org/fulldisclosure/2011/Aug/175&#xa;"><table key="CVE-2011-3192">
+<elem key="title">Apache byterange filter DoS</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="ids">
+<elem>BID:49303</elem>
+<elem>CVE:CVE-2011-3192</elem>
+</table>
+<table key="description">
+<elem>The Apache web server is vulnerable to a denial of service attack when numerous&#xa;overlapping byte ranges are requested.</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="year">2011</elem>
+<elem key="month">08</elem>
+<elem key="day">19</elem>
+</table>
+</table>
+<elem key="disclosure">2011-08-19</elem>
+<table key="refs">
+<elem>https://www.tenable.com/plugins/nessus/55976</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192</elem>
+<elem>https://www.securityfocus.com/bid/49303</elem>
+<elem>https://seclists.org/fulldisclosure/2011/Aug/175</elem>
+</table>
+</table>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-headers" output="&#xa;  Server: nginx/1.28.0&#xa;  Date: Thu, 18 Sep 2025 13:26:04 GMT&#xa;  Content-Type: text/html; charset=utf-8&#xa;  Content-Length: 18590&#xa;  Last-Modified: Mon, 01 Sep 2025 18:51:22 GMT&#xa;  Connection: close&#xa;  ETag: &quot;68b5eb2a-489e&quot;&#xa;  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload&#xa;  X-Frame-Options: DENY&#xa;  X-Content-Type-Options: nosniff&#xa;  Accept-Ranges: bytes&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-chrono" output="Request times for /; avg: 324.86ms; min: 216.58ms; max: 426.88ms"/><script id="http-security-headers" output="&#xa;  Strict_Transport_Security: &#xa;    Header: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload&#xa;  X_Frame_Options: &#xa;    Header: X-Frame-Options: DENY&#xa;    Description: The browser must not display this content in any frame.&#xa;  X_Content_Type_Options: &#xa;    Header: X-Content-Type-Options: nosniff&#xa;    Description: Will prevent the browser from MIME-sniffing a response away from the declared content-type. "><table key="Strict_Transport_Security">
+<elem>Header: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</elem>
+</table>
+<table key="X_Frame_Options">
+<elem>Header: X-Frame-Options: DENY</elem>
+<elem>Description: The browser must not display this content in any frame.</elem>
+</table>
+<table key="X_Content_Type_Options">
+<elem>Header: X-Content-Type-Options: nosniff</elem>
+<elem>Description: Will prevent the browser from MIME-sniffing a response away from the declared content-type. </elem>
+</table>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp384r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 4096) - A&#xa;      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (secp384r1) - A&#xa;      TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (dh 4096) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp384r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 4096) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 4096) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  TLSv1.3: &#xa;    ciphers: &#xa;      TLS_AKE_WITH_AES_256_GCM_SHA384 (secp384r1) - A&#xa;      TLS_AKE_WITH_CHACHA20_POLY1305_SHA256 (secp384r1) - A&#xa;      TLS_AKE_WITH_AES_128_GCM_SHA256 (secp384r1) - A&#xa;    cipher preference: server&#xa;  least strength: A"><table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="kex_info">secp384r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 4096</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp384r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 4096</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp384r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 4096</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp384r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">dh 4096</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<table key="TLSv1.3">
+<table key="ciphers">
+<table>
+<elem key="kex_info">secp384r1</elem>
+<elem key="name">TLS_AKE_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp384r1</elem>
+<elem key="name">TLS_AKE_WITH_CHACHA20_POLY1305_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">secp384r1</elem>
+<elem key="name">TLS_AKE_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<elem key="least strength">A</elem>
+</script><script id="http-title" output="400 The plain HTTP request was sent to HTTPS port"><elem key="title">400 The plain HTTP request was sent to HTTPS port</elem>
+</script><script id="http-server-header" output="nginx/1.28.0"><elem>nginx/1.28.0</elem>
+</script><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=abaque.ca&#xa;    &#xa;    Path: http://abaque.ca:443/&#xa;    Line number: 338&#xa;    Comment: &#xa;        &lt;!-&#45;&#xa;            &lt;div class=&quot;offset-2 col-8&quot;&gt;&#xa;            &lt;p&gt;&#xa;              &lt;a href=&quot;https://www.ieee.org/membership_services/membership/students/competitions/xtreme/index.html&quot;&gt;&#xa;                IEEEXtreme 24-Hour Programming Competition&#xa;              &lt;/a&gt;&#xa;            &lt;/p&gt;&#xa;            &lt;p&gt;&#xa;              &lt;a href=&quot;http://www.igvc.org/&quot;&gt;&#xa;                The 22nd Annual Intelligent Ground Vehicle Competition&#xa;              &lt;/a&gt;&#xa;            &lt;/p&gt;&#xa;            &lt;p&gt;&#xa;              &lt;a href=&quot;http://www.youtube.com/watch?v=FF31-CzWr9o&quot;&gt;&#xa;                IGVC 2013 Auto-Nav Challenge, Advanced Course&#xa;              &lt;/a&gt;&#xa;            &lt;/p&gt;&#xa;            &lt;/div&gt;&#xa;            -&#45;&gt;&#xa;    &#xa;    Path: http://abaque.ca:443/&#xa;    Line number: 68&#xa;    Comment: &#xa;        &lt;!-&#45;&#xa;            &lt;div class=&quot;offset-2 col-8&quot;&gt;&#xa;              &lt;strong&gt;AUTOMNE \(2024\)&lt;/strong&gt;&#xa;              &lt;br/&gt;&lt;p/&gt;&#xa;              &lt;ul&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/a24/info2012/&apos;&gt;&#xa;                  INFO2012 - Structures de donn&amp;eacute;es et algorithmes&lt;/a&gt;&lt;/li&gt;&#xa;        &#x9;&lt;br/&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/a24/info3214/&apos;&gt;&#xa;                  INFO3214 - Informatique th&amp;eacute;orique&lt;/a&gt;&lt;/li&gt;&#xa;                &lt;br/&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/a24/info6502/&apos;&gt;&#xa;                  INFO6502 - M&amp;eacute;thodologie de recherche&lt;/a&gt;&lt;/li&gt;&#xa;              &lt;/ul&gt;&#xa;            &lt;/div&gt;&#xa;        &#xa;            &lt;div class=&quot;offset-2 col-8&quot;&gt;&#xa;              &lt;strong&gt;HIVER \(2024\)&lt;/strong&gt;&#xa;              &lt;br/&gt;&lt;p/&gt;&#xa;              &lt;ul&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/h24/info4108/&apos;&gt;&#xa;                  INFO4108 - Programmation Unix&lt;/a&gt;&lt;/li&gt;&#xa;              &lt;/ul&gt;&#xa;            &lt;/div&gt;&#xa;        &#xa;            &lt;div class=&quot;offset-2 col-8&quot;&gt;&#xa;              &lt;strong&gt;AUTOMNE \(2023\)&lt;/strong&gt;&#xa;              &lt;br/&gt;&lt;p/&gt;&#xa;              &lt;ul&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/a23/info3214/&apos;&gt;&#xa;                  INFO3214 - Informatique th&amp;eacute;orique&lt;/a&gt;&lt;/li&gt;&#xa;                &lt;br/&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/a23/info6502/&apos;&gt;&#xa;                  INFO6502 - M&amp;eacute;thodologie de recherche&lt;/a&gt;&lt;/li&gt;&#xa;              &lt;/ul&gt;&#xa;            &lt;/div&gt;&#xa;        &#xa;            &lt;div class=&quot;offset-2 col-8&quot;&gt;&#xa;              &lt;strong&gt;HIVER \(2023\)&lt;/strong&gt;&#xa;              &lt;br/&gt;&lt;p/&gt;&#xa;              &lt;ul&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/h23/info4302/&apos;&gt;&#xa;                  INFO4302 - Algorithmes avanc&amp;eacute;s&lt;/a&gt;&lt;/li&gt;&#xa;              &lt;/ul&gt;&#xa;            &lt;/div&gt;&#xa;        &#xa;            &lt;br/&gt;&#xa;        &#xa;            &lt;div class=&quot;offset-2 col-8&quot;&gt;&#xa;              &lt;strong&gt;AUTOMNE \(2022\)&lt;/strong&gt;&#xa;              &lt;br/&gt;&lt;p/&gt;&#xa;              &lt;ul&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/a22/info3214/&apos;&gt;&#xa;                  INFO3214 - Informatique th&amp;eacute;orique&lt;/a&gt;&lt;/li&gt;&#xa;                &lt;br/&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/a22/info6502/&apos;&gt;&#xa;                  INFO6502 - M&amp;eacute;thodologie de recherche&lt;/a&gt;&lt;/li&gt;&#xa;              &lt;/ul&gt;&#xa;            &lt;/div&gt;&#xa;        &#xa;            &lt;br/&gt;&#xa;        &#xa;            &lt;div class=&quot;offset-2 col-8&quot;&gt;&#xa;              &lt;strong&gt;HIVER \(2022\)&lt;/strong&gt;&#xa;              &lt;br/&gt;&lt;p/&gt;&#xa;              &lt;ul&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/h22/info4108/&apos;&gt;&#xa;                  INFO4108 - Programmation Unix&lt;/a&gt;&lt;/li&gt;&#xa;              &lt;/ul&gt;&#xa;            &lt;/div&gt;&#xa;        &#xa;            &lt;br/&gt;&#xa;        &#xa;            &lt;div class=&quot;offset-2 col-8&quot;&gt;&#xa;              &lt;strong&gt;AUTOMNE \(2021\)&lt;/strong&gt;&#xa;              &lt;br/&gt;&lt;p/&gt;&#xa;              &lt;ul&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/a21/info2012/&apos;&gt;&#xa;                  INFO2012 - Structures de donn&amp;eacute;es et algorithmes&lt;/a&gt;&lt;/li&gt;&#xa;                &lt;br/&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/a21/info3214/&apos;&gt;&#xa;                  INFO3214 - Informatique th&amp;eacute;orique&lt;/a&gt;&lt;/li&gt;&#xa;                &lt;br/&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/a21/info6502/&apos;&gt;&#xa;                  INFO6502 - M&amp;eacute;thodologie de recherche&lt;/a&gt;&lt;/li&gt;&#xa;              &lt;/ul&gt;&#xa;            &lt;/div&gt;&#xa;        &#xa;            &lt;div class=&quot;offset-2 col-8&quot;&gt;&#xa;              &lt;strong&gt;HIVER \(2021\)&lt;/strong&gt; (&lt;em&gt;cours en ligne&lt;/em&gt;)&#xa;              &lt;br/&gt;&lt;p/&gt;&#xa;              &lt;ul&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/h21/info3212/&apos;&gt;&#xa;                  INFO3212 - Algorithmique&lt;/a&gt;&lt;/li&gt;&#xa;              &lt;/ul&gt;&#xa;            &lt;/div&gt;&#xa;        &#xa;            &lt;br/&gt;&#xa;        &#xa;            &lt;div class=&quot;offset-2 col-8&quot;&gt;&#xa;              &lt;strong&gt;AUTOMNE \(2020\)&lt;/strong&gt; (&lt;em&gt;cours en ligne&lt;/em&gt;)&#xa;              &lt;br/&gt;&lt;br/&gt;&#xa;              &lt;ul&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/a20/info3214/&apos;&gt;&#xa;                  INFO3214 - Informatique th&amp;eacute;orique&lt;/a&gt;&lt;/li&gt;&#xa;                &lt;br/&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/a20/info4302/&apos;&gt;&#xa;                  INFO4302 - Algorithmes avanc&amp;eacute;s&lt;/a&gt;&lt;/li&gt;&#xa;                &lt;br/&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/a20/info6502/&apos;&gt;&#xa;                  INFO6502 - M&amp;eacute;thodologie de recherche&lt;/a&gt;&lt;/li&gt;&#xa;              &lt;/ul&gt;&#xa;            &lt;/div&gt;&#xa;        &#xa;            &lt;br/&gt;&#xa;        &#xa;            &lt;div class=&quot;offset-2 col-8&quot;&gt;&#xa;              &lt;strong&gt;HIVER \(2020\)&lt;/strong&gt;&#xa;              &lt;br/&gt;&lt;br/&gt;&#xa;              &lt;ul&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/h20/info2013/&apos;&gt;&#xa;        &#x9;  INFO2013 - Introduction &amp;agrave; l&apos;informatique (&lt;em&gt;Laboratoires&lt;/em&gt;)&lt;/a&gt;&lt;/li&gt;&#xa;              &lt;/ul&gt;&#xa;            &lt;/div&gt;&#xa;        &#xa;            &lt;br/&gt;&#xa;        &#xa;            &lt;div class=&quot;offset-2 col-8&quot;&gt;&#xa;              &lt;strong&gt;AUTOMNE \(2019\)&lt;/strong&gt;&#xa;              &lt;br/&gt;&lt;br/&gt;&#xa;              &lt;ul&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/a19/info4108/&apos;&gt;&#xa;                  INFO4108 - Programmation Unix&lt;/a&gt;&lt;/li&gt;&#xa;                &lt;br/&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/a19/info6502/&apos;&gt;&#xa;                  INFO6502 - M&amp;eacute;thodologie de recherche&lt;/a&gt;&lt;/li&gt;&#xa;              &lt;/ul&gt;&#xa;            &lt;/div&gt;&#xa;        &#xa;            &lt;br/&gt;&#xa;        &#xa;            &lt;div class=&quot;offset-2 col-8&quot;&gt;&#xa;              &lt;strong&gt;AUTOMNE \(2018\)&lt;/strong&gt;&#xa;              &lt;br/&gt;&lt;br/&gt;&#xa;              &lt;ul&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/a18/info6502/&apos;&gt;&#xa;                  INFO6502 - M&amp;eacute;thodologie de recherche&lt;/a&gt;&lt;/li&gt;&#xa;              &lt;/ul&gt;&#xa;            &lt;/div&gt;&#xa;        &#xa;            &lt;br/&gt;&#xa;        &#xa;            &lt;div class=&quot;offset-2 col-8&quot;&gt;&#xa;              &lt;strong&gt;HIVER \(2018\)&lt;/strong&gt;&#xa;              &lt;br/&gt;&#xa;              &lt;ul&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/h18/info3012/&apos;&gt;&#xa;                  INFO3012 - Algorithmique&lt;/a&gt;&lt;/li&gt;&#xa;                &lt;br/&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/h18/info4018/&apos;&gt;&#xa;                  INFO4018 - S. C. en syst&amp;egrave;mes intelligents (Programmation web)&lt;/a&gt;&lt;/li&gt;&#xa;                &lt;br/&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/h18/info6502/&apos;&gt;&#xa;                  INFO6502 - M&amp;eacute;thodologie de recherche&lt;/a&gt;&lt;/li&gt;&#xa;            &lt;ul&gt;&#xa;            &lt;/div&gt;&#xa;        &#xa;            &lt;br/&gt;&#xa;        &#xa;            &lt;div class=&quot;offset-2 col-8&quot;&gt;&#xa;            &lt;ul&gt;&#xa;              &lt;li&gt;&lt;strong&gt;AUTOMNE \(2017 = \sqrt{1855^2 + 792^2}\)&lt;/strong&gt;&lt;/li&gt;&#xa;              &lt;br/&gt;&#xa;              &lt;ul&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/a17/info3014&apos;&gt;&#xa;                  INFO3014 - Informatique th&amp;eacute;orique&lt;/a&gt;&lt;/li&gt;&#xa;                &lt;br/&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/a17/info4008&apos;&gt;&#xa;                  INFO4008 - Programmation Unix&lt;/a&gt;&lt;/li&gt;&#xa;                &lt;br/&gt;&#xa;                &lt;li&gt;&lt;a href=&apos;/~eric/a17/info6501&apos;&gt;&#xa;                  INFO6501 - &amp;Eacute;tudes dirig&amp;eacute;es&lt;/a&gt;&lt;/li&gt;&#xa;              &lt;/ul&gt;&#xa;            &lt;/ul&gt;&#xa;            &lt;/div&gt;&#xa;        &#xa;            &lt;br/&gt;&#xa;        &#xa;            &lt;div class=&quot;offset-2 col-8&quot;&gt;&#xa;            &lt;a href=&apos;https://event.fourwaves.com/mscs2024/&apos;&gt;Concours de programmation &amp;amp; conf&amp;eacute;rences Science Atlantic (4-5 octobre 2024, University Acadia)&lt;/a&gt;&#xa;            &lt;br/&gt;&#xa;            &lt;/div&gt;&#xa;        -&#45;&gt;&#xa;    &#xa;    Path: http://abaque.ca:443/&#xa;    Line number: 273&#xa;    Comment: &#xa;        &lt;!-&#45;&lt;div class=&quot;offset-2 col-8&quot;&gt;&#xa;            &lt;a href=&apos;https://distrotest.net/&apos;&gt;100+ distributions Linux &amp;agrave; tester&amp;nbsp;!&lt;/a&gt;&#xa;            &lt;br/&gt;&#xa;            &lt;/div&gt;-&#45;&gt;&#xa;    &#xa;    Path: http://abaque.ca:443/&#xa;    Line number: 36&#xa;    Comment: &#xa;        &lt;!-&#45;&lt;div class=&quot;offset-2 col-8&quot;&gt;&#xa;            &lt;ul&gt;-&#45;&gt;&#xa;    &#xa;    Path: http://abaque.ca:443/&#xa;    Line number: 298&#xa;    Comment: &#xa;        &lt;!-&#45;&lt;li&gt;&lt;a href=&apos;http://codepad.org&apos; target=&apos;_blank&apos;&gt;codepad.org&lt;/a&gt;&lt;/li&gt;-&#45;&gt;&#xa;"/><script id="http-xssed" output="No previously reported XSS vuln."/><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="tls-alpn" output="&#xa;  h2&#xa;  http/1.1&#xa;  http/1.0&#xa;  http/0.9"><elem>h2</elem>
+<elem>http/1.1</elem>
+<elem>http/1.0</elem>
+<elem>http/0.9</elem>
+</script><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="ssl-cert" output="Subject: commonName=abaque.ca&#xa;Subject Alternative Name: DNS:abaque.ca, DNS:adminer.abaque.ca, DNS:bluejay.abaque.ca, DNS:dictee.abaque.ca, DNS:gitweb.abaque.ca, DNS:node.abaque.ca, DNS:pma.abaque.ca, DNS:www.abaque.ca&#xa;Not valid before: 2025-07-25T14:29:30&#xa;Not valid after:  2025-10-23T14:29:29"><table key="subject">
+<elem key="commonName">abaque.ca</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">R10</elem>
+<elem key="countryName">US</elem>
+<elem key="organizationName">Let&apos;s Encrypt</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">AC66BABFB9A47204B6A80DEE97BF62DD457FB0DA9D8B2A34DE53D43DF8BD9CC1DB62483AF5D93A3CACFCBB7B1E330477DE1CEC02539AF16662EA84F20EDC8D17F398F9D91300DD909E09F37EDEB418ED8135899DE71794ED0E78B80189DB07495E180D7E970E47FC44640B8166B9BE81CB1B9C4A6E6D7E9091D42DE12E3AF26F8C03A210A658058CD704A0607D488F7B0A1E2EEE99001A18C0F8B3C1CBB9A7D9F01F40BD4BB2AACBB223E5D1F1CEEAB18A08748C3E40F0CEEA9D4D86F1013893999D367DD3F9EEA39E81B9EA5CD251029ED3B76818FDA428F32D38AB76CB1E2A89638FE083823B892B63C62A1033EBAD5A8160E8004A59BDCC1E036B12E65513</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication, TLS Web Client Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">CB:0B:9D:45:36:71:56:62:E9:F7:F6:8E:10:1C:1C:11:04:37:75:91</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">BB:BC:C3:47:A5:E4:BC:A9:C6:C3:A4:72:0C:10:8D:A2:35:E1:C8:E8</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">CA Issuers - URI:http://r10.i.lencr.org/</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:abaque.ca, DNS:adminer.abaque.ca, DNS:bluejay.abaque.ca, DNS:dictee.abaque.ca, DNS:gitweb.abaque.ca, DNS:node.abaque.ca, DNS:pma.abaque.ca, DNS:www.abaque.ca</elem>
+</table>
+<table>
+<elem key="name">X509v3 Certificate Policies</elem>
+<elem key="value">Policy: 2.23.140.1.2.1</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">Full Name:&#xa;  URI:http://r10.c.lencr.org/127.crl&#xa;</elem>
+</table>
+<table>
+<elem key="name">CT Precertificate SCTs</elem>
+<elem key="value">Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : A4:42:C5:06:49:60:61:54:8F:0F:D4:EA:9C:FB:7A:2D:&#xa;                26:45:4D:87:A9:7F:2F:DF:45:59:F6:27:4F:3A:84:54&#xa;    Timestamp : Jul 25 15:28:00.539 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:46:02:21:00:B2:CD:4A:40:D2:10:EB:37:9F:08:9C:&#xa;                97:FC:22:4D:D4:5C:E6:3D:F4:CE:87:24:AD:5B:67:21:&#xa;                FC:08:D3:25:27:02:21:00:E3:A7:8E:EC:CD:6C:DA:6C:&#xa;                87:4D:02:6C:9F:62:EA:F0:C4:BA:53:A1:61:04:DC:5B:&#xa;                C2:9E:5D:46:55:77:4C:7C&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : DD:DC:CA:34:95:D7:E1:16:05:E7:95:32:FA:C7:9F:F8:&#xa;                3D:1C:50:DF:DB:00:3A:14:12:76:0A:2C:AC:BB:C8:2A&#xa;    Timestamp : Jul 25 15:28:00.646 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:45:02:20:06:66:53:F8:87:5F:DE:81:FB:B8:C2:DD:&#xa;                3A:D0:69:26:A9:06:E7:82:A1:04:C0:5E:03:47:B4:C4:&#xa;                0E:00:B2:FD:02:21:00:F7:08:14:74:77:AC:6E:49:C7:&#xa;                F4:E3:E4:09:62:A2:38:08:8F:67:89:F6:04:AE:C8:70:&#xa;                A1:20:1A:E1:48:C9:EB</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-07-25T14:29:30</elem>
+<elem key="notAfter">2025-10-23T14:29:29</elem>
+</table>
+<elem key="md5">6d1e07f39934be6368d396b21362debe</elem>
+<elem key="sha1">ce16d1e082d6912d8990b465da76b4c5e5530bfd</elem>
+<elem key="sha256">e77c0e3a98686eea65d94adffd19da68d17f2c5f22ee2c67e9eb6b55d294da7f</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFazCCBFOgAwIBAgISBslUJ/Vo9ACzVn6D1viBxW/+MA0GCSqGSIb3DQEBCwUA&#xa;MDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQD&#xa;EwNSMTAwHhcNMjUwNzI1MTQyOTMwWhcNMjUxMDIzMTQyOTI5WjAUMRIwEAYDVQQD&#xa;EwlhYmFxdWUuY2EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCsZrq/&#xa;uaRyBLaoDe6Xv2LdRX+w2p2LKjTeU9Q9+L2cwdtiSDr12To8rPy7ex4zBHfeHOwC&#xa;U5rxZmLqhPIO3I0X85j52RMA3ZCeCfN+3rQY7YE1iZ3nF5TtDni4AYnbB0leGA1+&#xa;lw5H/ERkC4Fmub6ByxucSm5tfpCR1C3hLjryb4wDohCmWAWM1wSgYH1Ij3sKHi7u&#xa;mQAaGMD4s8HLuafZ8B9AvUuyqsuyI+XR8c7qsYoIdIw+QPDO6p1NhvEBOJOZnTZ9&#xa;0/nuo56Buepc0lECntO3aBj9pCjzLTirdsseKoljj+CDgjuJK2PGKhAz661agWDo&#xa;AEpZvcweA2sS5lUTAgMBAAGjggKWMIICkjAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0l&#xa;BBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYE&#xa;FMsLnUU2cVZi6ff2jhAcHBEEN3WRMB8GA1UdIwQYMBaAFLu8w0el5LypxsOkcgwQ&#xa;jaI14cjoMDMGCCsGAQUFBwEBBCcwJTAjBggrBgEFBQcwAoYXaHR0cDovL3IxMC5p&#xa;LmxlbmNyLm9yZy8wgY4GA1UdEQSBhjCBg4IJYWJhcXVlLmNhghFhZG1pbmVyLmFi&#xa;YXF1ZS5jYYIRYmx1ZWpheS5hYmFxdWUuY2GCEGRpY3RlZS5hYmFxdWUuY2GCEGdp&#xa;dHdlYi5hYmFxdWUuY2GCDm5vZGUuYWJhcXVlLmNhgg1wbWEuYWJhcXVlLmNhgg13&#xa;d3cuYWJhcXVlLmNhMBMGA1UdIAQMMAowCAYGZ4EMAQIBMC8GA1UdHwQoMCYwJKAi&#xa;oCCGHmh0dHA6Ly9yMTAuYy5sZW5jci5vcmcvMTI3LmNybDCCAQUGCisGAQQB1nkC&#xa;BAIEgfYEgfMA8QB3AKRCxQZJYGFUjw/U6pz7ei0mRU2HqX8v30VZ9idPOoRUAAAB&#xa;mEIyxhsAAAQDAEgwRgIhALLNSkDSEOs3nwicl/wiTdRc5j30zockrVtnIfwI0yUn&#xa;AiEA46eO7M1s2myHTQJsn2Lq8MS6U6FhBNxbwp5dRlV3THwAdgDd3Mo0ldfhFgXn&#xa;lTL6x5/4PRxQ39sAOhQSdgosrLvIKgAAAZhCMsaGAAAEAwBHMEUCIAZmU/iHX96B&#xa;+7jC3TrQaSapBueCoQTAXgNHtMQOALL9AiEA9wgUdHesbknH9OPkCWKiOAiPZ4n2&#xa;BK7IcKEgGuFIyeswDQYJKoZIhvcNAQELBQADggEBAAyDGaqFMHNXEAMWk7SeW52S&#xa;OKV+kCAxtoEBwqYY1wB0VeWpU5hWeckLq7NYC7hJCQUFxJlv+uW0b/iNZklCJRip&#xa;fkltSIM1MSdn1Nj1frggu94Pf0MYYVrCwc8RKN8RoUgfCFazGzQgT8NRY0gg2cPa&#xa;mZycNmjYh51gYjHy49q+qSczmPptosW1YqDTG4lUd4toJbXG2Sf36RfbRVc66T4R&#xa;Yby0ZVntD/arFVnV+EUJRdjTgg1XaUTzfrbcgxg0+zuikL1ErfDGxSKShDfUJmuw&#xa;6rvw5729mPjaRWlzG3ruuvCLIYFPWn74tq/liSSvEvDdqAltRmU5IgUlQYLvIUU=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="vulners" output="&#xa;  nginx 1.28.0: &#xa;    &#x9;NGINX:CVE-2025-53859&#x9;6.3&#x9;https://vulners.com/nginx/NGINX:CVE-2025-53859"><table key="nginx 1.28.0">
+<table>
+<elem key="cvss">6.3</elem>
+<elem key="type">nginx</elem>
+<elem key="is_exploit">false</elem>
+<elem key="id">NGINX:CVE-2025-53859</elem>
+</table>
+</table>
+</script><script id="http-errors" output="&#xa;Spidering limited to: maxpagecount=40; withinhost=abaque.ca&#xa;  Found the following error pages: &#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/a20/info3214/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/a19/info4108/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/a24/info3214/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/h21/info3212/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/a17/info6501&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/h20/info2013/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/h24/info4108/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/a20/info4302/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/a18/info6502/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/a23/info3214/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/h18/info4018/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/a21/info6502/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/a19/info6502/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/a22/info6502/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/h18/info3012/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/h18/info6502/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/a22/info3214/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/a21/info2012/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/a21/info3214/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/a17/info4008&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/a24/info2012/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/h23/info4302/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/a24/info6502/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/%201https1/www.mycplus.com/featured-articles/hello-world-programs-in-300-programming-languages/1&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/a20/info6502/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/a17/info3014&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/h22/info4108/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://abaque.ca:443/~eric/a23/info6502/&#xa;"/><script id="http-referer-checker" output="&#xa;Spidering limited to: maxpagecount=30&#xa;  https://cdn.mathjax.org:443/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#xa;"/><script id="http-vhosts" output="&#xa;128 names had status 200"/><script id="http-waf-detect" output="IDS/IPS/WAF detected:&#xa;abaque.ca:443/?p4yl04d3=&lt;script&gt;alert(document.cookie)&lt;/script&gt;"/><script id="http-enum" output="&#xa;  /css/: Potentially interesting folder w/ directory listing&#xa;  /perl/: Potentially interesting folder w/ directory listing&#xa;"/><script id="http-mobileversion-checker" output="No mobile version detected."/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<osmatch name="Synology RT1900ac router" accuracy="88" line="108594">
+<osclass type="router" vendor="Synology" osfamily="embedded" accuracy="88"><cpe>cpe:/h:synology:rt1900ac</cpe></osclass>
+</osmatch>
+<osmatch name="Cisco Aironet 3800-series WAP" accuracy="86" line="16837">
+<osclass type="WAP" vendor="Cisco" osfamily="embedded" accuracy="86"/>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="86" line="59380">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="86"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Ubiquiti WAP (Linux 2.6.32)" accuracy="85" line="64986">
+<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="85"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+<osclass type="WAP" vendor="Ubiquiti" osfamily="embedded" accuracy="85"/>
+</osmatch>
+</os>
+<uptime seconds="2964307" lastboot="Fri Aug 15 03:02:53 2025"/>
+<distance value="3"/>
+<tcpsequence index="260" difficulty="Good luck!" values="B6880449,FD1E4F44,4CE3165E,3C43DB06,8500DAF3,A9CA3CB"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="B0AD89D3,B0AD8A2B,B0AD8A8F,B0AD8AF5,B0AD8B57,B0AD8BBB"/>
+<hostscript><script id="firewalk" output="&#xa;HOP  HOST            PROTOCOL  BLOCKED PORTS&#xa;1    139.103.96.254  tcp       1-10&#xa;"/><script id="dns-brute" output="&#xa;  DNS Brute-force hostnames: &#xa;    www.abaque.ca - 139.103.64.13"><table key="DNS Brute-force hostnames">
+<table>
+<elem key="hostname">www.abaque.ca</elem>
+<elem key="address">139.103.64.13</elem>
+</table>
+</table>
+</script><script id="whois-domain" output="&#xa;&#xa;Domain name record found at whois.cira.ca&#xa;Domain Name: abaque.ca&#xd;&#xa;Registry Domain ID: 15187220-CIRA&#xd;&#xa;Registrar WHOIS Server: whois.ca.fury.ca&#xd;&#xa;Registrar URL: https://www.namecheap.com/&#xd;&#xa;Updated Date: 2024-12-22T15:05:32Z&#xd;&#xa;Creation Date: 2013-11-07T15:03:04Z&#xd;&#xa;Registry Expiry Date: 2025-11-07T15:03:04Z&#xd;&#xa;Registrar: Go Get Canada Domain Registrar Ltd.&#xd;&#xa;Registrar IANA ID: not applicable&#xd;&#xa;Registrar Abuse Contact Email: abuse@namecheap.com&#xd;&#xa;Registrar Abuse Contact Phone: +1.6613102107&#xd;&#xa;Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited&#xd;&#xa;Registry Registrant ID: REDACTED FOR PRIVACY&#xd;&#xa;Registrant Name: REDACTED FOR PRIVACY&#xd;&#xa;Registrant Organization: REDACTED FOR PRIVACY&#xd;&#xa;Registrant Street: REDACTED FOR PRIVACY&#xd;&#xa;Registrant City: REDACTED FOR PRIVACY&#xd;&#xa;Registrant State/Province: REDACTED FOR PRIVACY&#xd;&#xa;Registrant Postal Code: REDACTED FOR PRIVACY&#xd;&#xa;Registrant Country: REDACTED FOR PRIVACY&#xd;&#xa;Registrant Phone: REDACTED FOR PRIVACY&#xd;&#xa;Registrant Phone Ext: REDACTED FOR PRIVACY&#xd;&#xa;Registrant Fax: REDACTED FOR PRIVACY&#xd;&#xa;Registrant Fax Ext: REDACTED FOR PRIVACY&#xd;&#xa;Registrant Email: Please ask the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Other contacts of the queried domain name&#xd;&#xa;Registry Admin ID: REDACTED FOR PRIVACY&#xd;&#xa;Admin Name: REDACTED FOR PRIVACY&#xd;&#xa;Admin Organization: REDACTED FOR PRIVACY&#xd;&#xa;Admin Street: REDACTED FOR PRIVACY&#xd;&#xa;Admin City: REDACTED FOR PRIVACY&#xd;&#xa;Admin State/Province: REDACTED FOR PRIVACY&#xd;&#xa;Admin Postal Code: REDACTED FOR PRIVACY&#xd;&#xa;Admin Country: REDACTED FOR PRIVACY&#xd;&#xa;Admin Phone: REDACTED FOR PRIVACY&#xd;&#xa;Admin Phone Ext: REDACTED FOR PRIVACY&#xd;&#xa;Admin Fax: REDACTED FOR PRIVACY&#xd;&#xa;Admin Fax Ext: REDACTED FOR PRIVACY&#xd;&#xa;Admin Email: Please ask the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Other contacts of the queried domain name&#xd;&#xa;Registry Tech ID: REDACTED FOR PRIVACY&#xd;&#xa;Tech Name: REDACTED FOR PRIVACY&#xd;&#xa;Tech Organization: REDACTED FOR PRIVACY&#xd;&#xa;Tech Street: REDACTED FOR PRIVACY&#xd;&#xa;Tech City: REDACTED FOR PRIVACY&#xd;&#xa;Tech State/Province: REDACTED FOR PRIVACY&#xd;&#xa;Tech Postal Code: REDACTED FOR PRIVACY&#xd;&#xa;Tech Country: REDACTED FOR PRIVACY&#xd;&#xa;Tech Phone: REDACTED FOR PRIVACY&#xd;&#xa;Tech Phone Ext: REDACTED FOR PRIVACY&#xd;&#xa;Tech Fax: REDACTED FOR PRIVACY&#xd;&#xa;Tech Fax Ext: REDACTED FOR PRIVACY&#xd;&#xa;Tech Email: Please ask the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Other contacts of the queried domain name&#xd;&#xa;Registry Billing ID: REDACTED FOR PRIVACY&#xd;&#xa;Billing Name: REDACTED FOR PRIVACY&#xd;&#xa;Billing Organization: REDACTED FOR PRIVACY&#xd;&#xa;Billing Street: REDACTED FOR PRIVACY&#xd;&#xa;Billing City: REDACTED FOR PRIVACY&#xd;&#xa;Billing State/Province: REDACTED FOR PRIVACY&#xd;&#xa;Billing Postal Code: REDACTED FOR PRIVACY&#xd;&#xa;Billing Country: REDACTED FOR PRIVACY&#xd;&#xa;Billing Phone: REDACTED FOR PRIVACY&#xd;&#xa;Billing Phone Ext: REDACTED FOR PRIVACY&#xd;&#xa;Billing Fax: REDACTED FOR PRIVACY&#xd;&#xa;Billing Fax Ext: REDACTED FOR PRIVACY&#xd;&#xa;Billing Email: Please ask the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Other contacts of the queried domain name&#xd;&#xa;Name Server: aragorn.ns.cloudflare.com&#xd;&#xa;Name Server: elaine.ns.cloudflare.com&#xd;&#xa;DNSSEC: unsigned&#xd;&#xa;URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/&#xd;&#xa;&gt;&gt;&gt; Last update of WHOIS database: 2025-09-18T13:25:59Z &lt;&lt;&lt;&#xd;&#xa;&#xd;&#xa;For more information on Whois status codes, please visit https://icann.org/epp&#xd;&#xa;&#xd;&#xa;%&#xd;&#xa;% Use of CIRA&apos;s WHOIS service is governed by the Terms of Use in its Legal&#xd;&#xa;% Notice, available at http://www.cira.ca/legal-notice/?lang=en&#xd;&#xa;%&#xd;&#xa;% (c) 2025 Canadian Internet Registration Authority, (http://www.cira.ca/)&#xd;&#xa;"/><script id="ipidseq" output="All zeros"/><script id="fcrdns" output="PASS (abaque.info.umcm.umoncton.ca)"><table key="abaque.info.umcm.umoncton.ca">
+<elem key="status">pass</elem>
+<table key="addresses">
+<elem>139.103.64.13</elem>
+</table>
+</table>
+</script><script id="port-states" output="&#xa;  tcp: &#xa;    open: 22,80,443&#xa;    filtered: 1-21,23-79,81-442,444-65535"><table key="tcp">
+<elem key="open">22,80,443</elem>
+<elem key="filtered">1-21,23-79,81-442,444-65535</elem>
+</table>
+</script><script id="dns-blacklist" output="&#xa;  SPAM&#xa;    l2.apews.org - FAIL&#xa;    list.quorum.to - SPAM&#xa;"/><script id="resolveall" output="&#xa;  Host &apos;abaque.ca&apos; also resolves to:&#xa;  Use the &apos;newtargets&apos; script-arg to add the results as targets&#xa;  Use the -&#45;resolve-all option to scan all resolved addresses without using this script.&#xa;"><elem key="newtargets">0</elem>
+<table key="addresses">
+</table>
+</script><script id="traceroute-geolocation" output="&#xa;  HOP  RTT    ADDRESS                                       GEOLOCATION&#xa;  1    37.97  fw-v96.ci.umoncton.ca (139.103.96.254)        - ,- &#xa;  2    ...&#xa;  3    28.62  abaque.info.umcm.umoncton.ca (139.103.64.13)  - ,- &#xa;"><table>
+<elem key="hostname">fw-v96.ci.umoncton.ca</elem>
+<elem key="rtt">37.97</elem>
+<elem key="ip">139.103.96.254</elem>
+<elem key="hop">1</elem>
+</table>
+<table>
+<elem key="hop">2</elem>
+</table>
+<table>
+<elem key="hostname">abaque.info.umcm.umoncton.ca</elem>
+<elem key="rtt">28.62</elem>
+<elem key="ip">139.103.64.13</elem>
+<elem key="hop">3</elem>
+</table>
+</script><script id="asn-query" output="&#xa;BGP: 139.103.0.0/16 | Country: CA&#xa;  Origin AS: 611 - NECN-1-611, CA&#xa;    Peer AS: 611"/><script id="whois-ip" output="Record found at whois.arin.net&#xa;netrange: 139.103.0.0 - 139.103.255.255&#xa;netname: UMONCTON-IPNET&#xa;orgname: Universite de Moncton&#xa;orgid: UDM-10-Z&#xa;country: CA stateprov: NB"/><script id="ip-geolocation-geoplugin" output="coordinates: nil, nil"><elem key="latitude">nil</elem>
+<elem key="longitude">nil</elem>
+<elem key="city">nil</elem>
+<elem key="region">nil</elem>
+<elem key="country">nil</elem>
+</script><script id="qscan" output="&#xa;PORT  FAMILY  MEAN (us)  STDDEV    LOSS (%)&#xa;22    0       14786.00   6028.39   0.0%&#xa;80    0       14650.80   7166.61   0.0%&#xa;443   0       24527.70   22763.28  0.0%&#xa;"/></hostscript><trace port="80" proto="tcp">
+<hop ttl="1" ipaddr="139.103.96.254" rtt="37.97" host="fw-v96.ci.umoncton.ca"/>
+<hop ttl="3" ipaddr="139.103.64.13" rtt="28.62" host="abaque.info.umcm.umoncton.ca"/>
+</trace>
+<times srtt="11899" rttvar="10651" to="100000"/>
+</host>
+<postscript><script id="reverse-index" output="&#xa;  22/tcp: 139.103.64.13&#xa;  80/tcp: 139.103.64.13&#xa;  443/tcp: 139.103.64.13"><table key="22/tcp">
+<elem>139.103.64.13</elem>
+</table>
+<table key="80/tcp">
+<elem>139.103.64.13</elem>
+</table>
+<table key="443/tcp">
+<elem>139.103.64.13</elem>
+</table>
+</script></postscript><runstats><finished time="1758202080" timestr="Thu Sep 18 10:28:00 2025" summary="Nmap done at Thu Sep 18 10:28:00 2025; 1 IP address (1 host up) scanned in 293.40 seconds" elapsed="293.40" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

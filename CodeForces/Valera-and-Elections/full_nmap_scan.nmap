@@ -1,0 +1,704 @@
+# Nmap 7.97 scan initiated Thu Sep 18 10:23:06 2025 as: nmap -sS -p- -T4 -sV -O -A -Pn --reason --script default,safe,discovery -oA full_nmap_scan abaque.ca
+Pre-scan script results:
+| broadcast-listener: 
+|   ether
+|   udp
+|       DHCP
+|         srv ip          cli ip          mask           gw              dns                           vendor
+|_        139.103.96.254  139.103.111.38  255.255.240.0  139.103.96.254  139.103.8.130, 139.103.8.133  -
+|_broadcast-ospf2-discover: ERROR: Script execution failed (use -d to debug)
+|_hostmap-robtex: *TEMPORARILY DISABLED* due to changes in Robtex's API. See https://www.robtex.com/api/
+Bug in lltd-discovery: no string output.
+Bug in broadcast-upnp-info: no string output.
+|_broadcast-ataoe-discover: ERROR: Script execution failed (use -d to debug)
+|_targets-sniffer: Sniffed 0 address(es). 
+| targets-ipv6-multicast-slaac: 
+|   IP: fe80::1401:c30b:6397:aca   MAC: 2e:cd:17:b1:d9:04  IFACE: wlan0
+|   IP: fe80::b683:f584:f405:e26b  MAC: bc:54:2f:45:e1:83  IFACE: wlan0
+|   IP: fe80::dd04:3272:4b20:b541  MAC: 04:ec:d8:c7:58:4e  IFACE: wlan0
+|   IP: fe80::1fbe:46c2:6d36:b9ed  MAC: b2:24:80:aa:88:4a  IFACE: wlan0
+|   IP: fe80::7690:e94:57c7:298f   MAC: 94:bb:43:3f:31:5e  IFACE: wlan0
+|   IP: fe80::7b06:8d89:cebb:f497  MAC: dc:1b:a1:98:25:7e  IFACE: wlan0
+|   IP: fe80::8a1:d88c:2962:3307   MAC: e6:95:90:45:db:30  IFACE: wlan0
+|   IP: fe80::7fe0:4eff:38f5:6fc8  MAC: 10:68:38:6b:88:ae  IFACE: wlan0
+|   IP: fe80::3bca:6e55:468e:e8d8  MAC: 40:c7:3c:7e:95:b4  IFACE: wlan0
+|   IP: fe80::a063:240c:60f7:367b  MAC: dc:4b:a1:16:97:8a  IFACE: wlan0
+|_  Use --script-args=newtargets to add the results as targets
+|_broadcast-eigrp-discovery: ERROR: Script execution failed (use -d to debug)
+|_broadcast-pim-discovery: ERROR: Script execution failed (use -d to debug)
+|_multicast-profinet-discovery: 0
+|_http-robtex-shared-ns: *TEMPORARILY DISABLED* due to changes in Robtex's API. See https://www.robtex.com/api/
+|_eap-info: ERROR: Script execution failed (use -d to debug)
+|_mrinfo: ERROR: Script execution failed (use -d to debug)
+| targets-asn: 
+|_  targets-asn.asn is a mandatory parameter
+|_knx-gateway-discover: ERROR: Script execution failed (use -d to debug)
+|_broadcast-igmp-discovery: ERROR: Script execution failed (use -d to debug)
+Nmap scan report for abaque.ca (139.103.64.13)
+Host is up, received user-set (0.012s latency).
+rDNS record for 139.103.64.13: abaque.info.umcm.umoncton.ca
+Not shown: 65532 filtered tcp ports (no-response)
+PORT    STATE SERVICE  REASON         VERSION
+22/tcp  open  ssh      syn-ack ttl 62 OpenSSH 10.0 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_10.0
+80/tcp  open  http     syn-ack ttl 62 nginx 1.28.0
+|_http-title: Did not follow redirect to https://abaque.ca/
+|_http-date: Thu, 18 Sep 2025 13:26:05 GMT; 0s from local time.
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-headers: 
+|   Server: nginx/1.28.0
+|   Date: Thu, 18 Sep 2025 13:26:15 GMT
+|   Content-Type: text/html
+|   Content-Length: 169
+|   Connection: close
+|   Location: https://abaque.ca/
+|   
+|_  (Request type: GET)
+| vulners: 
+|   nginx 1.28.0: 
+|_    	NGINX:CVE-2025-53859	6.3	https://vulners.com/nginx/NGINX:CVE-2025-53859
+|_http-comments-displayer: Couldn't find any comments.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-feed: Couldn't find any feeds.
+|_http-server-header: nginx/1.28.0
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Redirected To: https://abaque.ca/
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-sitemap-generator: 
+|   Directory structure:
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    
+| http-security-headers: 
+|   Strict_Transport_Security: 
+|     Header: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+|   X_Frame_Options: 
+|     Header: X-Frame-Options: DENY
+|     Description: The browser must not display this content in any frame.
+|   X_Content_Type_Options: 
+|     Header: X-Content-Type-Options: nosniff
+|_    Description: Will prevent the browser from MIME-sniffing a response away from the declared content-type. 
+|_http-fetch: Please enter the complete path of the directory to save data in.
+|_http-xssed: No previously reported XSS vuln.
+| http-vhosts: 
+|_128 names had status 301
+|_http-mobileversion-checker: No mobile version detected.
+|_http-chrono: Request times for /; avg: 292.01ms; min: 217.71ms; max: 413.99ms
+|_http-errors: Couldn't find any error pages.
+443/tcp open  ssl/http syn-ack ttl 62 nginx 1.28.0
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|     /css/
+|       css: 1; jpg: 3; png: 4
+|     /~eric/a25/info3214/
+|       Other: 1
+|     /~eric/archlinux/
+|       Other: 1
+|   Longest directory structure:
+|     Depth: 3
+|     Dir: /~eric/a25/info3214/
+|   Total files found (by extension):
+|_    Other: 3; css: 1; jpg: 3; png: 4
+|_http-date: Thu, 18 Sep 2025 13:26:05 GMT; 0s from local time.
+| http-vuln-cve2011-3192: 
+|   VULNERABLE:
+|   Apache byterange filter DoS
+|     State: VULNERABLE
+|     IDs:  BID:49303  CVE:CVE-2011-3192
+|       The Apache web server is vulnerable to a denial of service attack when numerous
+|       overlapping byte ranges are requested.
+|     Disclosure date: 2011-08-19
+|     References:
+|       https://www.tenable.com/plugins/nessus/55976
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192
+|       https://www.securityfocus.com/bid/49303
+|_      https://seclists.org/fulldisclosure/2011/Aug/175
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-headers: 
+|   Server: nginx/1.28.0
+|   Date: Thu, 18 Sep 2025 13:26:04 GMT
+|   Content-Type: text/html; charset=utf-8
+|   Content-Length: 18590
+|   Last-Modified: Mon, 01 Sep 2025 18:51:22 GMT
+|   Connection: close
+|   ETag: "68b5eb2a-489e"
+|   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+|   X-Frame-Options: DENY
+|   X-Content-Type-Options: nosniff
+|   Accept-Ranges: bytes
+|   
+|_  (Request type: HEAD)
+|_http-chrono: Request times for /; avg: 324.86ms; min: 216.58ms; max: 426.88ms
+| http-security-headers: 
+|   Strict_Transport_Security: 
+|     Header: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+|   X_Frame_Options: 
+|     Header: X-Frame-Options: DENY
+|     Description: The browser must not display this content in any frame.
+|   X_Content_Type_Options: 
+|     Header: X-Content-Type-Options: nosniff
+|_    Description: Will prevent the browser from MIME-sniffing a response away from the declared content-type. 
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp384r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 4096) - A
+|       TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (secp384r1) - A
+|       TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (dh 4096) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp384r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 4096) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 4096) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.3: 
+|     ciphers: 
+|       TLS_AKE_WITH_AES_256_GCM_SHA384 (secp384r1) - A
+|       TLS_AKE_WITH_CHACHA20_POLY1305_SHA256 (secp384r1) - A
+|       TLS_AKE_WITH_AES_128_GCM_SHA256 (secp384r1) - A
+|     cipher preference: server
+|_  least strength: A
+|_http-title: 400 The plain HTTP request was sent to HTTPS port
+|_http-server-header: nginx/1.28.0
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=abaque.ca
+|     
+|     Path: http://abaque.ca:443/
+|     Line number: 338
+|     Comment: 
+|         <!--
+|             <div class="offset-2 col-8">
+|             <p>
+|               <a href="https://www.ieee.org/membership_services/membership/students/competitions/xtreme/index.html">
+|                 IEEEXtreme 24-Hour Programming Competition
+|               </a>
+|             </p>
+|             <p>
+|               <a href="http://www.igvc.org/">
+|                 The 22nd Annual Intelligent Ground Vehicle Competition
+|               </a>
+|             </p>
+|             <p>
+|               <a href="http://www.youtube.com/watch?v=FF31-CzWr9o">
+|                 IGVC 2013 Auto-Nav Challenge, Advanced Course
+|               </a>
+|             </p>
+|             </div>
+|             -->
+|     
+|     Path: http://abaque.ca:443/
+|     Line number: 68
+|     Comment: 
+|         <!--
+|             <div class="offset-2 col-8">
+|               <strong>AUTOMNE \(2024\)</strong>
+|               <br/><p/>
+|               <ul>
+|                 <li><a href='/~eric/a24/info2012/'>
+|                   INFO2012 - Structures de donn&eacute;es et algorithmes</a></li>
+|         	<br/>
+|                 <li><a href='/~eric/a24/info3214/'>
+|                   INFO3214 - Informatique th&eacute;orique</a></li>
+|                 <br/>
+|                 <li><a href='/~eric/a24/info6502/'>
+|                   INFO6502 - M&eacute;thodologie de recherche</a></li>
+|               </ul>
+|             </div>
+|         
+|             <div class="offset-2 col-8">
+|               <strong>HIVER \(2024\)</strong>
+|               <br/><p/>
+|               <ul>
+|                 <li><a href='/~eric/h24/info4108/'>
+|                   INFO4108 - Programmation Unix</a></li>
+|               </ul>
+|             </div>
+|         
+|             <div class="offset-2 col-8">
+|               <strong>AUTOMNE \(2023\)</strong>
+|               <br/><p/>
+|               <ul>
+|                 <li><a href='/~eric/a23/info3214/'>
+|                   INFO3214 - Informatique th&eacute;orique</a></li>
+|                 <br/>
+|                 <li><a href='/~eric/a23/info6502/'>
+|                   INFO6502 - M&eacute;thodologie de recherche</a></li>
+|               </ul>
+|             </div>
+|         
+|             <div class="offset-2 col-8">
+|               <strong>HIVER \(2023\)</strong>
+|               <br/><p/>
+|               <ul>
+|                 <li><a href='/~eric/h23/info4302/'>
+|                   INFO4302 - Algorithmes avanc&eacute;s</a></li>
+|               </ul>
+|             </div>
+|         
+|             <br/>
+|         
+|             <div class="offset-2 col-8">
+|               <strong>AUTOMNE \(2022\)</strong>
+|               <br/><p/>
+|               <ul>
+|                 <li><a href='/~eric/a22/info3214/'>
+|                   INFO3214 - Informatique th&eacute;orique</a></li>
+|                 <br/>
+|                 <li><a href='/~eric/a22/info6502/'>
+|                   INFO6502 - M&eacute;thodologie de recherche</a></li>
+|               </ul>
+|             </div>
+|         
+|             <br/>
+|         
+|             <div class="offset-2 col-8">
+|               <strong>HIVER \(2022\)</strong>
+|               <br/><p/>
+|               <ul>
+|                 <li><a href='/~eric/h22/info4108/'>
+|                   INFO4108 - Programmation Unix</a></li>
+|               </ul>
+|             </div>
+|         
+|             <br/>
+|         
+|             <div class="offset-2 col-8">
+|               <strong>AUTOMNE \(2021\)</strong>
+|               <br/><p/>
+|               <ul>
+|                 <li><a href='/~eric/a21/info2012/'>
+|                   INFO2012 - Structures de donn&eacute;es et algorithmes</a></li>
+|                 <br/>
+|                 <li><a href='/~eric/a21/info3214/'>
+|                   INFO3214 - Informatique th&eacute;orique</a></li>
+|                 <br/>
+|                 <li><a href='/~eric/a21/info6502/'>
+|                   INFO6502 - M&eacute;thodologie de recherche</a></li>
+|               </ul>
+|             </div>
+|         
+|             <div class="offset-2 col-8">
+|               <strong>HIVER \(2021\)</strong> (<em>cours en ligne</em>)
+|               <br/><p/>
+|               <ul>
+|                 <li><a href='/~eric/h21/info3212/'>
+|                   INFO3212 - Algorithmique</a></li>
+|               </ul>
+|             </div>
+|         
+|             <br/>
+|         
+|             <div class="offset-2 col-8">
+|               <strong>AUTOMNE \(2020\)</strong> (<em>cours en ligne</em>)
+|               <br/><br/>
+|               <ul>
+|                 <li><a href='/~eric/a20/info3214/'>
+|                   INFO3214 - Informatique th&eacute;orique</a></li>
+|                 <br/>
+|                 <li><a href='/~eric/a20/info4302/'>
+|                   INFO4302 - Algorithmes avanc&eacute;s</a></li>
+|                 <br/>
+|                 <li><a href='/~eric/a20/info6502/'>
+|                   INFO6502 - M&eacute;thodologie de recherche</a></li>
+|               </ul>
+|             </div>
+|         
+|             <br/>
+|         
+|             <div class="offset-2 col-8">
+|               <strong>HIVER \(2020\)</strong>
+|               <br/><br/>
+|               <ul>
+|                 <li><a href='/~eric/h20/info2013/'>
+|         	  INFO2013 - Introduction &agrave; l'informatique (<em>Laboratoires</em>)</a></li>
+|               </ul>
+|             </div>
+|         
+|             <br/>
+|         
+|             <div class="offset-2 col-8">
+|               <strong>AUTOMNE \(2019\)</strong>
+|               <br/><br/>
+|               <ul>
+|                 <li><a href='/~eric/a19/info4108/'>
+|                   INFO4108 - Programmation Unix</a></li>
+|                 <br/>
+|                 <li><a href='/~eric/a19/info6502/'>
+|                   INFO6502 - M&eacute;thodologie de recherche</a></li>
+|               </ul>
+|             </div>
+|         
+|             <br/>
+|         
+|             <div class="offset-2 col-8">
+|               <strong>AUTOMNE \(2018\)</strong>
+|               <br/><br/>
+|               <ul>
+|                 <li><a href='/~eric/a18/info6502/'>
+|                   INFO6502 - M&eacute;thodologie de recherche</a></li>
+|               </ul>
+|             </div>
+|         
+|             <br/>
+|         
+|             <div class="offset-2 col-8">
+|               <strong>HIVER \(2018\)</strong>
+|               <br/>
+|               <ul>
+|                 <li><a href='/~eric/h18/info3012/'>
+|                   INFO3012 - Algorithmique</a></li>
+|                 <br/>
+|                 <li><a href='/~eric/h18/info4018/'>
+|                   INFO4018 - S. C. en syst&egrave;mes intelligents (Programmation web)</a></li>
+|                 <br/>
+|                 <li><a href='/~eric/h18/info6502/'>
+|                   INFO6502 - M&eacute;thodologie de recherche</a></li>
+|             <ul>
+|             </div>
+|         
+|             <br/>
+|         
+|             <div class="offset-2 col-8">
+|             <ul>
+|               <li><strong>AUTOMNE \(2017 = \sqrt{1855^2 + 792^2}\)</strong></li>
+|               <br/>
+|               <ul>
+|                 <li><a href='/~eric/a17/info3014'>
+|                   INFO3014 - Informatique th&eacute;orique</a></li>
+|                 <br/>
+|                 <li><a href='/~eric/a17/info4008'>
+|                   INFO4008 - Programmation Unix</a></li>
+|                 <br/>
+|                 <li><a href='/~eric/a17/info6501'>
+|                   INFO6501 - &Eacute;tudes dirig&eacute;es</a></li>
+|               </ul>
+|             </ul>
+|             </div>
+|         
+|             <br/>
+|         
+|             <div class="offset-2 col-8">
+|             <a href='https://event.fourwaves.com/mscs2024/'>Concours de programmation &amp; conf&eacute;rences Science Atlantic (4-5 octobre 2024, University Acadia)</a>
+|             <br/>
+|             </div>
+|         -->
+|     
+|     Path: http://abaque.ca:443/
+|     Line number: 273
+|     Comment: 
+|         <!--<div class="offset-2 col-8">
+|             <a href='https://distrotest.net/'>100+ distributions Linux &agrave; tester&nbsp;!</a>
+|             <br/>
+|             </div>-->
+|     
+|     Path: http://abaque.ca:443/
+|     Line number: 36
+|     Comment: 
+|         <!--<div class="offset-2 col-8">
+|             <ul>-->
+|     
+|     Path: http://abaque.ca:443/
+|     Line number: 298
+|     Comment: 
+|_        <!--<li><a href='http://codepad.org' target='_blank'>codepad.org</a></li>-->
+|_http-xssed: No previously reported XSS vuln.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|   h2
+|   http/1.1
+|   http/1.0
+|_  http/0.9
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| ssl-cert: Subject: commonName=abaque.ca
+| Subject Alternative Name: DNS:abaque.ca, DNS:adminer.abaque.ca, DNS:bluejay.abaque.ca, DNS:dictee.abaque.ca, DNS:gitweb.abaque.ca, DNS:node.abaque.ca, DNS:pma.abaque.ca, DNS:www.abaque.ca
+| Not valid before: 2025-07-25T14:29:30
+|_Not valid after:  2025-10-23T14:29:29
+|_http-feed: Couldn't find any feeds.
+| vulners: 
+|   nginx 1.28.0: 
+|_    	NGINX:CVE-2025-53859	6.3	https://vulners.com/nginx/NGINX:CVE-2025-53859
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=abaque.ca
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/a20/info3214/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/a19/info4108/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/a24/info3214/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/h21/info3212/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/a17/info6501
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/h20/info2013/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/h24/info4108/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/a20/info4302/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/a18/info6502/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/a23/info3214/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/h18/info4018/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/a21/info6502/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/a19/info6502/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/a22/info6502/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/h18/info3012/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/h18/info6502/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/a22/info3214/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/a21/info2012/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/a21/info3214/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/a17/info4008
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/a24/info2012/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/h23/info4302/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/a24/info6502/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/%201https1/www.mycplus.com/featured-articles/hello-world-programs-in-300-programming-languages/1
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/a20/info6502/
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/a17/info3014
+|   
+|   Error Code: 404
+|   	https://abaque.ca:443/~eric/h22/info4108/
+|   
+|   Error Code: 404
+|_  	https://abaque.ca:443/~eric/a23/info6502/
+| http-referer-checker: 
+| Spidering limited to: maxpagecount=30
+|_  https://cdn.mathjax.org:443/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+| http-vhosts: 
+|_128 names had status 200
+| http-waf-detect: IDS/IPS/WAF detected:
+|_abaque.ca:443/?p4yl04d3=<script>alert(document.cookie)</script>
+| http-enum: 
+|   /css/: Potentially interesting folder w/ directory listing
+|_  /perl/: Potentially interesting folder w/ directory listing
+|_http-mobileversion-checker: No mobile version detected.
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: router|WAP|general purpose
+Running (JUST GUESSING): Synology embedded (88%), Cisco embedded (86%), Linux 2.6.X (86%), Ubiquiti embedded (85%)
+OS CPE: cpe:/h:synology:rt1900ac cpe:/o:linux:linux_kernel:2.6.32
+Aggressive OS guesses: Synology RT1900ac router (88%), Cisco Aironet 3800-series WAP (86%), Linux 2.6.32 (86%), Ubiquiti WAP (Linux 2.6.32) (85%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Host script results:
+| firewalk: 
+| HOP  HOST            PROTOCOL  BLOCKED PORTS
+|_1    139.103.96.254  tcp       1-10
+| dns-brute: 
+|   DNS Brute-force hostnames: 
+|_    www.abaque.ca - 139.103.64.13
+| whois-domain: 
+| 
+| Domain name record found at whois.cira.ca
+| Domain Name: abaque.ca\x0D
+| Registry Domain ID: 15187220-CIRA\x0D
+| Registrar WHOIS Server: whois.ca.fury.ca\x0D
+| Registrar URL: https://www.namecheap.com/\x0D
+| Updated Date: 2024-12-22T15:05:32Z\x0D
+| Creation Date: 2013-11-07T15:03:04Z\x0D
+| Registry Expiry Date: 2025-11-07T15:03:04Z\x0D
+| Registrar: Go Get Canada Domain Registrar Ltd.\x0D
+| Registrar IANA ID: not applicable\x0D
+| Registrar Abuse Contact Email: abuse@namecheap.com\x0D
+| Registrar Abuse Contact Phone: +1.6613102107\x0D
+| Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited\x0D
+| Registry Registrant ID: REDACTED FOR PRIVACY\x0D
+| Registrant Name: REDACTED FOR PRIVACY\x0D
+| Registrant Organization: REDACTED FOR PRIVACY\x0D
+| Registrant Street: REDACTED FOR PRIVACY\x0D
+| Registrant City: REDACTED FOR PRIVACY\x0D
+| Registrant State/Province: REDACTED FOR PRIVACY\x0D
+| Registrant Postal Code: REDACTED FOR PRIVACY\x0D
+| Registrant Country: REDACTED FOR PRIVACY\x0D
+| Registrant Phone: REDACTED FOR PRIVACY\x0D
+| Registrant Phone Ext: REDACTED FOR PRIVACY\x0D
+| Registrant Fax: REDACTED FOR PRIVACY\x0D
+| Registrant Fax Ext: REDACTED FOR PRIVACY\x0D
+| Registrant Email: Please ask the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Other contacts of the queried domain name\x0D
+| Registry Admin ID: REDACTED FOR PRIVACY\x0D
+| Admin Name: REDACTED FOR PRIVACY\x0D
+| Admin Organization: REDACTED FOR PRIVACY\x0D
+| Admin Street: REDACTED FOR PRIVACY\x0D
+| Admin City: REDACTED FOR PRIVACY\x0D
+| Admin State/Province: REDACTED FOR PRIVACY\x0D
+| Admin Postal Code: REDACTED FOR PRIVACY\x0D
+| Admin Country: REDACTED FOR PRIVACY\x0D
+| Admin Phone: REDACTED FOR PRIVACY\x0D
+| Admin Phone Ext: REDACTED FOR PRIVACY\x0D
+| Admin Fax: REDACTED FOR PRIVACY\x0D
+| Admin Fax Ext: REDACTED FOR PRIVACY\x0D
+| Admin Email: Please ask the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Other contacts of the queried domain name\x0D
+| Registry Tech ID: REDACTED FOR PRIVACY\x0D
+| Tech Name: REDACTED FOR PRIVACY\x0D
+| Tech Organization: REDACTED FOR PRIVACY\x0D
+| Tech Street: REDACTED FOR PRIVACY\x0D
+| Tech City: REDACTED FOR PRIVACY\x0D
+| Tech State/Province: REDACTED FOR PRIVACY\x0D
+| Tech Postal Code: REDACTED FOR PRIVACY\x0D
+| Tech Country: REDACTED FOR PRIVACY\x0D
+| Tech Phone: REDACTED FOR PRIVACY\x0D
+| Tech Phone Ext: REDACTED FOR PRIVACY\x0D
+| Tech Fax: REDACTED FOR PRIVACY\x0D
+| Tech Fax Ext: REDACTED FOR PRIVACY\x0D
+| Tech Email: Please ask the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Other contacts of the queried domain name\x0D
+| Registry Billing ID: REDACTED FOR PRIVACY\x0D
+| Billing Name: REDACTED FOR PRIVACY\x0D
+| Billing Organization: REDACTED FOR PRIVACY\x0D
+| Billing Street: REDACTED FOR PRIVACY\x0D
+| Billing City: REDACTED FOR PRIVACY\x0D
+| Billing State/Province: REDACTED FOR PRIVACY\x0D
+| Billing Postal Code: REDACTED FOR PRIVACY\x0D
+| Billing Country: REDACTED FOR PRIVACY\x0D
+| Billing Phone: REDACTED FOR PRIVACY\x0D
+| Billing Phone Ext: REDACTED FOR PRIVACY\x0D
+| Billing Fax: REDACTED FOR PRIVACY\x0D
+| Billing Fax Ext: REDACTED FOR PRIVACY\x0D
+| Billing Email: Please ask the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Other contacts of the queried domain name\x0D
+| Name Server: aragorn.ns.cloudflare.com\x0D
+| Name Server: elaine.ns.cloudflare.com\x0D
+| DNSSEC: unsigned\x0D
+| URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/\x0D
+| >>> Last update of WHOIS database: 2025-09-18T13:25:59Z <<<\x0D
+| \x0D
+| For more information on Whois status codes, please visit https://icann.org/epp\x0D
+| \x0D
+| %\x0D
+| % Use of CIRA's WHOIS service is governed by the Terms of Use in its Legal\x0D
+| % Notice, available at http://www.cira.ca/legal-notice/?lang=en\x0D
+| %\x0D
+|_% (c) 2025 Canadian Internet Registration Authority, (http://www.cira.ca/)\x0D
+|_ipidseq: All zeros
+|_fcrdns: PASS (abaque.info.umcm.umoncton.ca)
+| port-states: 
+|   tcp: 
+|     open: 22,80,443
+|_    filtered: 1-21,23-79,81-442,444-65535
+| dns-blacklist: 
+|   SPAM
+|     l2.apews.org - FAIL
+|_    list.quorum.to - SPAM
+| resolveall: 
+|   Host 'abaque.ca' also resolves to:
+|   Use the 'newtargets' script-arg to add the results as targets
+|_  Use the --resolve-all option to scan all resolved addresses without using this script.
+| traceroute-geolocation: 
+|   HOP  RTT    ADDRESS                                       GEOLOCATION
+|   1    37.97  fw-v96.ci.umoncton.ca (139.103.96.254)        - ,- 
+|   2    ...
+|_  3    28.62  abaque.info.umcm.umoncton.ca (139.103.64.13)  - ,- 
+| asn-query: 
+| BGP: 139.103.0.0/16 | Country: CA
+|   Origin AS: 611 - NECN-1-611, CA
+|_    Peer AS: 611
+| whois-ip: Record found at whois.arin.net
+| netrange: 139.103.0.0 - 139.103.255.255
+| netname: UMONCTON-IPNET
+| orgname: Universite de Moncton
+| orgid: UDM-10-Z
+|_country: CA stateprov: NB
+|_ip-geolocation-geoplugin: coordinates: nil, nil
+| qscan: 
+| PORT  FAMILY  MEAN (us)  STDDEV    LOSS (%)
+| 22    0       14786.00   6028.39   0.0%
+| 80    0       14650.80   7166.61   0.0%
+|_443   0       24527.70   22763.28  0.0%
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT      ADDRESS
+1   37.97 ms fw-v96.ci.umoncton.ca (139.103.96.254)
+2   ...
+3   28.62 ms abaque.info.umcm.umoncton.ca (139.103.64.13)
+
+Post-scan script results:
+| reverse-index: 
+|   22/tcp: 139.103.64.13
+|   80/tcp: 139.103.64.13
+|_  443/tcp: 139.103.64.13
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Sep 18 10:28:00 2025 -- 1 IP address (1 host up) scanned in 293.40 seconds
